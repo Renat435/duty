@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  frontend-prod:
+    build:
+      context: front
+      dockerfile: Dockerfile
+    container_name: frontend-prod
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - network
+  node-application:
+    build:
+      context: back
+      dockerfile: Dockerfile
+    container_name: node-application
+    ports:
+      - "5000:5000"
+    restart: always
+    networks:
+      - network
+
+networks:
+  network:

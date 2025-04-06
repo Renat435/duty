@@ -1,0 +1,37 @@
+.button {
+  background: none;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color .3s, color .3s;
+  border: none;
+
+  &--default {
+    background-color: var(--baltic-sea);
+    color: white;
+    border: 2px solid var(--baltic-sea);
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &--danger {
+    background-color: #dc3545;
+    color: white;
+
+    &:hover {
+      background-color: #bb2d3b;
+    }
+  }
+
+  &--success {
+    background-color: #28a745;
+    color: var(--white);
+
+    &:hover {
+      background-color: #297b3b;
+    }
+  }
+}
